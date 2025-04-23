@@ -3,6 +3,7 @@ import React from 'react'
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { RemoveItem,incrementQty,decrementQty } from '../Redux/cartSlice';
+import { toast } from 'material-react-toastify';
 
 
 const Cart_Card = ({name,image,price,qty,id}) => {
@@ -35,7 +36,13 @@ const Cart_Card = ({name,image,price,qty,id}) => {
                 </div>
                 <div className='w-full h-[50%] md:h-full md:w-[20%] p-2 mt-3 md:p-0 md:mt-0 border-t-2 border-gray-300 md:border-t-0 flex justify-between md:justify-center items-center md:flex-col gap-3'>
                     <div className='text-xl text-yellow-500 font-semibold'>Rs. {price}/-</div>
-                    <div className='text-[30px] text-red-500 font-semibold cursor-pointer' ><MdDelete onClick={()=>dispatch(RemoveItem({name,image,price,qty,id}))}/></div>
+                    <div className='text-[30px] text-red-500 font-semibold cursor-pointer' ><MdDelete 
+                    onClick={()=>{
+                        dispatch(RemoveItem({name,image,price,qty,id}));
+                        toast.error(`${name} removed`)
+                    }
+    
+                    }/></div>
                 </div>
             </div>
             

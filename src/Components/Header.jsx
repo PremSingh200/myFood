@@ -18,6 +18,7 @@ const Header = () => {
   return (
     <div className='flex justify-between py-[20px] px-[20px] text-[18px]   border-none shadow-sm relative'>
       <Link to='/'><div className="logo font-bold cursor-pointer "><p>My<span className='text-yellow-500'>Food</span></p></div></Link>
+      
 
       {/* <div className='absolute bg-red-300 text-center right-0 top-0 w-[200px] h-screen flex justify-center items-center'>
         <div ><RxCross1 className='absolute top-2 right-2 cursor-pointer'/></div>

@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='w-full bg-black text-white' >
-        <div className='flex justify-around py-5 flex-wrap'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4 justify-items-start pl-4 md:justify-items-center items-center py-5 '>
         <div>
         <div className="logo font-bold "><p>My<span className='text-yellow-500'>Food</span></p></div>
         <p>© 2025 MyFood Limited</p>

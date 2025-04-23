@@ -2,6 +2,7 @@ import React from 'react'
 import Cart_Card from './Cart_Card'
 import { useSelector } from 'react-redux'
 import { TiShoppingCart } from "react-icons/ti";
+import { toast } from 'material-react-toastify';
 
 const Cart = () => {
   let items=useSelector(state=>state.cart.cart)
@@ -37,7 +38,12 @@ const Cart = () => {
           <span className='text-lg font-semibold text-gray-600'>Grand Total</span>
           <span className='text-lg font-semibold text-yellow-600'>Rs {grandTotal}/-</span>
         </div>
-      <button className='w-[60%]  p-3 font-bold text-[15px] cursor-pointer bg-yellow-500 hover:bg-yellow-300 transition-all'>
+      <button className='w-[60%]  p-3 font-bold text-[15px] cursor-pointer bg-yellow-500 hover:bg-yellow-300 transition-all'
+       onClick={()=>{
+        toast.success("Order Placed")
+       }
+      
+      }>
         Place Order</button>
         </div>:<div className='flex justify-center items-center min-h-[60vh] flex-col'>
           <div><TiShoppingCart className='text-yellow-500 h-[100px] w-[100px] md:h-[200px] md:w-[200px]'/></div>
