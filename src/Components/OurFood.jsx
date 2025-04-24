@@ -67,7 +67,7 @@ const OurFood = () => {
                 </div> : ""
             }
             
-            <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center items-center gap-2  px-5 py-4' >
+            <div className=' grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center items-center gap-2  px-5 py-4' >
                 {cate.length>1?cate.map((item) => (
                     <MenuCard name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} id={item.id}/>
                 )):<div className='flex justify-center items-center min-h-[60vh] flex-col'>

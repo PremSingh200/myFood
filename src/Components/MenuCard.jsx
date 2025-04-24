@@ -14,7 +14,7 @@ const MenuCard = ({name,image,price,type,id}) => {
   let dispatch=useDispatch()
  
   return (
-    <div className='h-[300px] w-[230px] lg:w-[250px] p-5 shadow-lg rounded-md flex flex-col gap-3 hover:border-2 border-yellow-500 bg-white'>
+    <div className='h-[450px] w-[full] sm:h-[300px] sm:w-[250px] p-5 shadow-lg rounded-md flex flex-col gap-3 hover:border-2 border-yellow-500 bg-white'>
         <div className='w-[full] h-[60%] overflow-hidden rounded-md'><img src={image} alt="" srcset="" className='rounded-lg object-cover'/></div>
         <div className='font-semibold text-[20px] text-black'>{name}</div>
         <div className='font-semibold text-[20px]  flex justify-between items-center text-yellow-500'>

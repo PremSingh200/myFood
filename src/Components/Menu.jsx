@@ -20,12 +20,17 @@ const Menu = () => {
       </div>
       
       
-      <div className=' flex justify-center flex-wrap items-center gap-4 px-5 py-4' >
+     <div className='mt-4 overflow-x-auto whitespace-nowrap scrollbar-hide'>
+    
         
         {cate.slice(0,6).map((item) => (
-          <MenuCard name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} id={item.id} />
+           <div className=' inline-block mr-4' >
+            <MenuCard name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} id={item.id} />
+          
+          </div>
         ))}
-      </div>
+      
+     </div>
     </div>
   )
 }
